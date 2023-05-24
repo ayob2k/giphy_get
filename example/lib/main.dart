@@ -165,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
             floatingActionButton: FloatingActionButton(
                 onPressed: () async {
                   giphyGetWrapper.getGif(
-                    'MsArjir7Z39yTndk2KpMPRgmyP8AIg9l',
+                    '',
                     context,
                     showGIFs: true,
                     showStickers: true,
