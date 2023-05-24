@@ -13,7 +13,7 @@ class _GiphyTabTopState extends State<GiphyTabTop> {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8.0),
       decoration: BoxDecoration(
-          color: Theme.of(context).textTheme.bodyLarge!.color!,
+          color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(20)),
       width: 50,
       height: 5,

@@ -108,6 +108,8 @@ class _SearchAppBarState extends State<SearchAppBar> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: TextField(
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.tertiary),
                       textAlignVertical: TextAlignVertical.center,
                       autofocus: _sheetProvider.initialExtent ==
                           SheetProvider.maxExtent,
@@ -116,13 +118,13 @@ class _SearchAppBarState extends State<SearchAppBar> {
                       decoration: InputDecoration(
                         isDense: true,
                         filled: true,
+                        fillColor: Theme.of(context).colorScheme.background,
                         prefixIcon: _searchIcon(),
                         hintText: l.searchInputLabel,
                         suffixIcon: IconButton(
                             icon: Icon(
                               Icons.clear,
-                              color:
-                                  Theme.of(context).textTheme.bodyLarge!.color!,
+                              color: Theme.of(context).colorScheme.primary,
                             ),
                             onPressed: () {
                               setState(() {

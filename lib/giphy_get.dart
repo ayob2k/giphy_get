@@ -51,11 +51,12 @@ class GiphyGet {
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
-          top: Radius.circular(10.0),
+          top: Radius.circular(15.0),
         ),
       ),
       isScrollControlled: true,
       context: context,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       builder: (ctx) => MultiProvider(
         providers: [
           ChangeNotifierProvider(
