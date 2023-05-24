@@ -126,7 +126,7 @@ class GiphyClient {
 
   Future<Response> _getWithAuthorization(Uri uri) async {
     Map<String, String> queryParams = Map.from(uri.queryParameters)
-      ..putIfAbsent('MsArjir7Z39yTndk2KpMPRgmyP8AIg9l', () => _apiKey)
+      ..putIfAbsent('api_key', () => _apiKey)
       ..putIfAbsent('random_id', () => _random_id);
 
     final response =

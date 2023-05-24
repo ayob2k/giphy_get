@@ -93,6 +93,7 @@ class _GiphyTabBarState extends State<GiphyTabBar> {
               ? null
               : Colors.transparent;
         }),
+        dividerColor: Colors.transparent,
         indicatorColor: _tabProvider.tabColor,
         labelColor: _tabProvider.textSelectedColor,
         unselectedLabelColor: _tabProvider.textUnselectedColor,
