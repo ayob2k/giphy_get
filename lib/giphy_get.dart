@@ -56,7 +56,6 @@ class GiphyGet {
       ),
       isScrollControlled: true,
       context: context,
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       builder: (ctx) => MultiProvider(
         providers: [
           ChangeNotifierProvider(

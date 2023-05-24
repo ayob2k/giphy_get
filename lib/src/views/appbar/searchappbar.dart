@@ -109,7 +109,7 @@ class _SearchAppBarState extends State<SearchAppBar> {
                     borderRadius: BorderRadius.circular(10),
                     child: TextField(
                       style: TextStyle(
-                          color: Theme.of(context).colorScheme.tertiary),
+                          color: Theme.of(context).colorScheme.primary),
                       textAlignVertical: TextAlignVertical.center,
                       autofocus: _sheetProvider.initialExtent ==
                           SheetProvider.maxExtent,
@@ -118,6 +118,8 @@ class _SearchAppBarState extends State<SearchAppBar> {
                       decoration: InputDecoration(
                         isDense: true,
                         filled: true,
+                        hintStyle: TextStyle(
+                            color: Theme.of(context).colorScheme.tertiary),
                         fillColor: Theme.of(context).colorScheme.background,
                         prefixIcon: _searchIcon(),
                         hintText: l.searchInputLabel,

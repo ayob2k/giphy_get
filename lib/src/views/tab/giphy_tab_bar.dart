@@ -83,13 +83,21 @@ class _GiphyTabBarState extends State<GiphyTabBar> {
     if (_tabs.length == 1) return SizedBox();
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 5.0),
+      padding: const EdgeInsets.only(bottom: 15.0),
       child: TabBar(
+        splashFactory: NoSplash.splashFactory,
+        overlayColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+          // Use the default focused overlay color
+          return states.contains(MaterialState.focused)
+              ? null
+              : Colors.transparent;
+        }),
         indicatorColor: _tabProvider.tabColor,
         labelColor: _tabProvider.textSelectedColor,
         unselectedLabelColor: _tabProvider.textUnselectedColor,
         indicatorSize: TabBarIndicatorSize.label,
-        labelPadding: const EdgeInsets.symmetric(vertical: 3.0),
+        padding: EdgeInsets.symmetric(vertical: 0),
         controller: widget.tabController,
         tabs: _tabs.map((e) => e.tab).toList(),
         onTap: _setTabType,
